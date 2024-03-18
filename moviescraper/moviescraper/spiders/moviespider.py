@@ -29,3 +29,4 @@ class MoviespiderSpider(scrapy.Spider):
         duration = response.xpath('//div//ul/li/text()').extract_first()
         storyline = response.xpath('//div[@data-testid="storyline-plot-summary"]//text()').get()
         language = response.xpath('//li[@data-testid="title-details-languages"]//a/text()').get()
+        casting =response.xpath('//li[@data-testid="title-pc-principal-credit"]//a/text()').extract()[0:2]
