@@ -6,6 +6,7 @@
 #     https://docs.scrapy.org/en/latest/topics/settings.html
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
+from scrapy.settings.default_settings import DOWNLOADER_MIDDLEWARES_BASE
 
 BOT_NAME = "moviescraper"
 
@@ -14,7 +15,29 @@ NEWSPIDER_MODULE = "moviescraper.spiders"
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-USER_AGENT = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 9_6_4) Gecko/20130401 Firefox/62.2'
+USER_AGENT = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 9_6_4) Gecko/20130401 Firefox/62.2' #declare user-agent
+
+#creer liste user agents pour rotation
+# DOWNLOADER_MIDDLEWARES = {
+#     'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware': None,
+#     'scrapy_useragents.downloadermiddlewares.useragents.UserAgentsMiddleware': 500,
+# }
+
+# DOWNLOADER_MIDDLEWARES.update(DOWNLOADER_MIDDLEWARES_BASE)
+
+# USER_AGENTS = [
+#     ('Mozilla/5.0 (X11; Linux x86_64) '
+#      'AppleWebKit/537.36 (KHTML, like Gecko) '
+#      'Chrome/57.0.2987.110 '
+#      'Safari/537.36'),  # chrome
+#     ('Mozilla/5.0 (X11; Linux x86_64) '
+#      'AppleWebKit/537.36 (KHTML, like Gecko) '
+#      'Chrome/61.0.3163.79 '
+#      'Safari/537.36'),  # chrome
+#     ('Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:55.0) '
+#      'Gecko/20100101 '
+#      'Firefox/55.0')  # firefox
+# ]
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
