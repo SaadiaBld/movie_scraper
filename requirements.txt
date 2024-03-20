@@ -1,2 +1,5 @@
 scrapy==2.11.1
 ipython
+scrapy-useragents
+mysql-connector-python
+jupyter

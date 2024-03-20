@@ -49,4 +49,3 @@ class MoviespiderSpider(scrapy.Spider):
         yield movie_item
 
 
-        {"title": "It Happened One Night", "release_date": "1934", "rating": "8.1", "country": "United States", "category": "Comedy", "duration": "1h 45m", "storyline": "A renegade reporter trailing a young runaway heiress for a big story joins her on a bus heading from Florida to New York, and they end up stuck with each other when the bus leaves them behin...", "language": "English", "casting": ["Clark Gable", "Claudette Colbert", "Walter Connolly", "Roscoe Karns", "Jameson Thomas", "Alan Hale", "Arthur Hoyt", "Blanche Friderici", "Charles C. Wilson", "Ernie Adams", "Jessie Arnold", "Irving Bacon", "William Bailey", "William Begg", "William A. Boardway", "Ward Bond", "Harry C. Bradley", "George P. Breakston"]}
